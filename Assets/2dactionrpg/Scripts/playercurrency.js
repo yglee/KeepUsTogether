@@ -49,6 +49,11 @@ updateMoney();
 }
 }
 
+function addReward (reward : int) {
+	money+=reward;
+	updateMoney();
+}
+
 //here is where we update how much money we have, then update the guitext when needed.
 function updateMoney () {
 PlayerPrefs.SetFloat("money", money);

@@ -50,6 +50,15 @@ updateHearts();
 }
 
 function Update () {
+
+
+	if (Input.GetKeyDown("d"))
+	{
+		var fader = GameObject.Find("fader");
+		fader.BroadcastMessage("setGameOver", SendMessageOptions.DontRequireReceiver);
+		//TODO: need to teleport...
+		
+	}
 //if the players material color is not normal (we just check the red channel to see) we need to keep track of how long so we can switch it back at a certain point.
 if(renderer.material.color.r != 1){
 //if the color was changed because the player was hurt, we keep track of time with colorcounter
