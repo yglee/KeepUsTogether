@@ -20,6 +20,8 @@ var attackLeft:Texture;
 var attackRight:Texture;
 var attackUp:Texture;
 var attackDown:Texture;
+var vehicleLeft:Texture;
+var vehicleRight:Texture;
 
 //here are private variables we use to keep track of animation stuff.
 private var direction:int = 1;
@@ -169,7 +171,6 @@ renderer.material.mainTexture = idleDown;
 
 //if strike is called, we do the attack animation, pause for 0.25 seconds and let the player go back to what he was doing.
 function strike () {
-/*
 attacking = true;
 if(direction == 1){
 renderer.material.mainTexture = attackRight;
@@ -185,5 +186,4 @@ renderer.material.mainTexture = attackDown;
 }
 yield WaitForSeconds(0.25);
 attacking = false;
-*/
 }

@@ -15,26 +15,30 @@ function Start () {
 target = GameObject.Find("permanentobjects/Player");
 }
 
-function Update () {
-if(target != null){
-//If Follow Horizontal is checked in inspector, the camera follows player horizonally with the deadzone.
-if(followHorizontal == true){
-	if (transform.position.x >= target.transform.position.x + deadZone){
-		transform.position.x = target.transform.position.x + deadZone;
+function Update () 
+{
+	if(target != null)
+	{
+		//If Follow Horizontal is checked in inspector, the camera follows player horizonally with the deadzone.
+		if(followHorizontal == true)
+		{
+			if (transform.position.x >= target.transform.position.x + deadZone){
+				transform.position.x = target.transform.position.x + deadZone;
+			}
+			if (transform.position.x <= target.transform.position.x - deadZone){
+				transform.position.x = target.transform.position.x - deadZone;
+			}
+		}
+		
+		//If Follow Vertical is checked in inspector, the camera follows player vertically with the deadzone.
+		if(followVertical == true)
+		{
+			if (transform.position.z >= target.transform.position.z + deadZone){
+				transform.position.z = target.transform.position.z + deadZone;
+			}
+			if (transform.position.z <= target.transform.position.z - deadZone){
+				transform.position.z = target.transform.position.z - deadZone;
+			}
+		}
 	}
-	if (transform.position.x <= target.transform.position.x - deadZone){
-		transform.position.x = target.transform.position.x - deadZone;
-	}
-}
-
-//If Follow Vertical is checked in inspector, the camera follows player vertically with the deadzone.
-if(followVertical == true){
-	if (transform.position.z >= target.transform.position.z + deadZone){
-		transform.position.z = target.transform.position.z + deadZone;
-	}
-	if (transform.position.z <= target.transform.position.z - deadZone){
-		transform.position.z = target.transform.position.z - deadZone;
-	}
-}
-}
 }

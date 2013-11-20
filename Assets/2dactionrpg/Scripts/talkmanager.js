@@ -8,6 +8,8 @@ var line1GUI:GUIText;
 var line2GUI:GUIText;
 var line3GUI:GUIText;
 var line4GUI:GUIText;
+
+var lineLimit = 35;
 //this is the really short beep sounds that plays each time a letter is added while talking.
 var talkSound:AudioClip;
 
@@ -38,165 +40,216 @@ private var canReceive2 = true;
 private var canReceive3 = true;
 private var canReceive4 = true;
 
+//this function will automatically break down a long string into multiple lines
+function updateLines(string : String)
+{
+	var lines = new Array();
+	var lineIndex = 0;
+	
+	var cutIndex = 0;
+	var cutCandidate = 0;
+	
+	// break down the strings into lines
+	for(var i = 0; i < string.Length; i++)
+	{
+		if ((string[i] == " " || string[i] == "/") && i != string.Length - 1)
+		{
+			cutCandidate = i + 1;  // include the space in the same line
+		}
+        
+		if (i - cutIndex == lineLimit || string[i] == "/")	// if detect a slash, force a new line
+		{
+			if (string[i] == "/")
+			{	// don't take the slash character
+				lines[lineIndex] = string.Substring(cutIndex, cutCandidate - cutIndex - 1);
+			}
+			else
+			{
+				lines[lineIndex] = string.Substring(cutIndex, cutCandidate - cutIndex);
+			}
+			cutIndex = cutCandidate;
+			lineIndex++;
+		}
+		else if (i == string.Length - 1)	// get the rest of the string for the last line
+		{
+			lines[lineIndex] = string.Substring(cutIndex, string.Length - cutIndex);
+			lineIndex++;
+		}
+	}
+	
+	if (lines.Count > 0) {
+		lineOne(lines[0].ToString());
+	}
+	if (lines.Count > 1) {
+		lineTwo(lines[1].ToString());
+	}
+	if (lines.Count > 2) {
+		lineThree(lines[2].ToString());
+	}
+	if (lines.Count > 3) {
+		lineFour(lines[3].ToString());
+	}
+}
+
 //this function is received by the npc
 function lineOne (string : String){
-//this checks if it can receive a string. this would be false if the player is already receiving stuff from another npc.
-if(canReceive1 == true){
-//this clears the strings so they can be filled with new ones.
-line1 = null;
-line2 = null;
-line3 = null;
-line4 = null;
-//this sets canreceive to false so we can't get any other strings from another npc
-canReceive1 = false;
-//this sets line 1 to the npc's received string for line 1
-line1 = string;
-//this sets how many characters are in line1
-line1left = line1.Length;
-//this sets line1 state to be true so line one will be typed out
-line1State = true;
-canTalk = true;
-//this makes sure the strings in the guitext are cleared before we add to it
-line1GUI.guiText.text = null;
-line2GUI.guiText.text = null;
-line3GUI.guiText.text = null;
-line4GUI.guiText.text = null;
-//this calls the typelineone function so line one will be typed out
-TypeLineOne();
-}
+    //this checks if it can receive a string. this would be false if the player is already receiving stuff from another npc.
+    if(canReceive1 == true){
+        //this clears the strings so they can be filled with new ones.
+        line1 = null;
+        line2 = null;
+        line3 = null;
+        line4 = null;
+        //this sets canreceive to false so we can't get any other strings from another npc
+        canReceive1 = false;
+        //this sets line 1 to the npc's received string for line 1
+        line1 = string;
+        //this sets how many characters are in line1
+        line1left = line1.Length;
+        //this sets line1 state to be true so line one will be typed out
+        line1State = true;
+        canTalk = true;
+        //this makes sure the strings in the guitext are cleared before we add to it
+        line1GUI.guiText.text = null;
+        line2GUI.guiText.text = null;
+        line3GUI.guiText.text = null;
+        line4GUI.guiText.text = null;
+        //this calls the typelineone function so line one will be typed out
+        TypeLineOne();
+    }
 }
 
 //this receives the string for line 2, just like lineOne above, but doesn't do anything until TypeLineTwo is called.
 function lineTwo (string : String){
-if(canReceive2 == true){
-canReceive2 = false;
-line2 = string;
-line2left = line2.Length;
-}
+    if(canReceive2 == true){
+        canReceive2 = false;
+        line2 = string;
+        line2left = line2.Length;
+    }
 }
 
 //this receives the string for line 3, just like lineOne above, but doesn't do anything until TypeLineThree is called.
 function lineThree (string : String){
-if(canReceive3 == true){
-canReceive3 = false;
-line3 = string;
-line3left = line3.Length;
-}
+    if(canReceive3 == true){
+        canReceive3 = false;
+        line3 = string;
+        line3left = line3.Length;
+    }
 }
 
 //this receives the string for line 4, just like lineOne above, but doesn't do anything until TypeLineFour is called.
 function lineFour (string : String){
-if(canReceive4 == true){
-canReceive4 = false;
-line4 = string;
-line4left = line4.Length;
-}
+    if(canReceive4 == true){
+        canReceive4 = false;
+        line4 = string;
+        line4left = line4.Length;
+    }
 }
 
 //now we start typing out each character for line one
 function TypeLineOne () {
-//if the string line1 is not empty, we do it.
-if(line1 != null){
-//we make the string an array, then type each one out one by one
-	for (var letter in line1.ToCharArray()) {
-		// if cantalk is true, we add a letter.
-		if(canTalk == true){
-		line1GUI.guiText.text += letter;
-		//then we subtract one from the total length of hte string
-		line1left -= 1;
-		//if the length hits 0 or is somehow less than 0, we stop trying to add more to the line, and move on to the next line
-		if(line1left <= 0){
-		//here we set this line state to false
-		line1State = false;
-		//then set line 2 to true
-		line2State = true;
-		//then we move to TypeLineTwo to work on that line.
-		TypeLineTwo();
-		}
-		//when we play the sound for each character, we just want to make sure its not a space.
-		if(letter != " "){
-		audio.PlayOneShot(talkSound);
-		}
-		//we pause for the same amount of time as letterPause thats set in the private variables section
-		yield WaitForSeconds (letterPause);
-		}
-	}
-}
+    //if the string line1 is not empty, we do it.
+    if(line1 != null){
+        //we make the string an array, then type each one out one by one
+        for (var letter in line1.ToCharArray()) {
+            // if cantalk is true, we add a letter.
+            if(canTalk == true){
+                line1GUI.guiText.text += letter;
+                //then we subtract one from the total length of hte string
+                line1left -= 1;
+                //if the length hits 0 or is somehow less than 0, we stop trying to add more to the line, and move on to the next line
+                if(line1left <= 0){
+                    //here we set this line state to false
+                    line1State = false;
+                    //then set line 2 to true
+                    line2State = true;
+                    //then we move to TypeLineTwo to work on that line.
+                    TypeLineTwo();
+                }
+                //when we play the sound for each character, we just want to make sure its not a space.
+                if(letter != " "){
+                    audio.PlayOneShot(talkSound);
+                }
+                //we pause for the same amount of time as letterPause thats set in the private variables section
+                yield WaitForSeconds (letterPause);
+            }
+        }
+    }
 }
 
 //this process is the same as function TypeLineOne ()
 function TypeLineTwo () {
-if(line2 != null){
-	for (var letter in line2.ToCharArray()) {
-		if(canTalk == true){
-		line2GUI.guiText.text += letter;
-		line2left -= 1;
-		if(line2left <= 0){
-		line2State = false;
-		line3State = true;
-		TypeLineThree();
-		}
-		if(letter != " "){
-		audio.PlayOneShot(talkSound);
-		}
-		yield WaitForSeconds (letterPause);
-		}
-	}
-}	
+    if(line2 != null){
+        for (var letter in line2.ToCharArray()) {
+            if(canTalk == true){
+                line2GUI.guiText.text += letter;
+                line2left -= 1;
+                if(line2left <= 0){
+                    line2State = false;
+                    line3State = true;
+                    TypeLineThree();
+                }
+                if(letter != " "){
+                    audio.PlayOneShot(talkSound);
+                }
+                yield WaitForSeconds (letterPause);
+            }
+        }
+    }
 }
 
 //this process is the same as function TypeLineOne ()
 function TypeLineThree () {
-if(line3 != null){
-	for (var letter in line3.ToCharArray()) {
-		if(canTalk == true){
-		line3GUI.guiText.text += letter;
-		line3left -= 1;
-		if(line3left <= 0){
-		line3State = false;
-		line4State = true;
-		TypeLineFour();
-		}
-		if(letter != " "){
-		audio.PlayOneShot(talkSound);
-		}
-		yield WaitForSeconds (letterPause);
-		}
-	}		
-}
+    if(line3 != null){
+        for (var letter in line3.ToCharArray()) {
+            if(canTalk == true){
+                line3GUI.guiText.text += letter;
+                line3left -= 1;
+                if(line3left <= 0){
+                    line3State = false;
+                    line4State = true;
+                    TypeLineFour();
+                }
+                if(letter != " "){
+                    audio.PlayOneShot(talkSound);
+                }
+                yield WaitForSeconds (letterPause);
+            }
+        }		
+    }
 }
 
 //this process is the same as function TypeLineOne ()
 function TypeLineFour () {
-if(line4 != null){
-	for (var letter in line4.ToCharArray()) {
-		if(canTalk == true){
-		line4GUI.guiText.text += letter;
-		line4left -= 1;
-		if(line4left <= 0){
-		line1State = false;
-		line2State = false;
-		line3State = false;
-		line4State = false;
-		}
-		if(letter != " "){
-		audio.PlayOneShot(talkSound);
-		}
-		yield WaitForSeconds (letterPause);
-		}
-	}
-}	
+    if(line4 != null){
+        for (var letter in line4.ToCharArray()) {
+            if(canTalk == true){
+                line4GUI.guiText.text += letter;
+                line4left -= 1;
+                if(line4left <= 0){
+                    line1State = false;
+                    line2State = false;
+                    line3State = false;
+                    line4State = false;
+                }
+                if(letter != " "){
+                    audio.PlayOneShot(talkSound);
+                }
+                yield WaitForSeconds (letterPause);
+            }
+        }
+    }	
 }
 
 //when we are called to clear the strings, we do so. That way the guiText strings won't accidentally add to something that already exists. Instead its refreshed so it can be used over and over.
 function clearStrings () {
-line1GUI.guiText.text = null;
-line2GUI.guiText.text = null;
-line3GUI.guiText.text = null;
-line4GUI.guiText.text = null;
-canTalk = false;
-canReceive1 = true;
-canReceive2 = true;
-canReceive3 = true;
-canReceive4 = true;
+    line1GUI.guiText.text = null;
+    line2GUI.guiText.text = null;
+    line3GUI.guiText.text = null;
+    line4GUI.guiText.text = null;
+    canTalk = false;
+    canReceive1 = true;
+    canReceive2 = true;
+    canReceive3 = true;
+    canReceive4 = true;
 }
