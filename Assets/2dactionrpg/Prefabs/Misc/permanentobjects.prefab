@@ -909,7 +909,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.439999998, y: .230000004, z: 1}
+  m_LocalPosition: {x: -.519999981, y: .119999997, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 400072}
@@ -989,7 +989,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.439999998, y: .0199999996, z: 1}
+  m_LocalPosition: {x: -.519999981, y: -.0399999991, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 400072}
@@ -1022,7 +1022,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.439999998, y: -.0799999982, z: 1}
+  m_LocalPosition: {x: -.519999981, y: -.119999997, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 400072}
@@ -1044,7 +1044,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.439999998, y: .125, z: 1}
+  m_LocalPosition: {x: -.519999981, y: .0399999991, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 400072}
@@ -1125,6 +1125,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!23 &2300002
 Renderer:
   m_ObjectHideFlags: 1
@@ -1143,6 +1146,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!23 &2300004
 Renderer:
   m_ObjectHideFlags: 1
@@ -1161,6 +1167,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!23 &2300006
 Renderer:
   m_ObjectHideFlags: 1
@@ -1179,6 +1188,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1298,7 +1310,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 4ef2d1e16ef1f4c809374ccff1b3a881, type: 3}
   m_PlayOnAwake: 1
@@ -1633,6 +1645,8 @@ MonoBehaviour:
   attackRight: {fileID: 2800000, guid: 2b4a72fc5c64d334ea74c1611f726628, type: 3}
   attackUp: {fileID: 2800000, guid: 864a3f5d88fc0cc40bf6d5ba44365cb4, type: 3}
   attackDown: {fileID: 2800000, guid: d15f9bb089704f147b5ad5b6358e53bb, type: 3}
+  vehicleLeft: {fileID: 0}
+  vehicleRight: {fileID: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1765,7 +1779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d5720537df641958ca62072fe1f8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 
+  itemId: sword
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1911,6 +1925,7 @@ MonoBehaviour:
   line2GUI: {fileID: 13200010}
   line3GUI: {fileID: 13200006}
   line4GUI: {fileID: 13200008}
+  lineLimit: 35
   talkSound: {fileID: 8300000, guid: 3471f318f8f4942918588b910ef66257, type: 3}
 --- !u!114 &11400066
 MonoBehaviour:
@@ -2383,10 +2398,10 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: -20
+    y: 10
+    width: 50
+    height: -50
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -2472,7 +2487,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 30
+  m_FontSize: 60
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2495,7 +2510,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 30
+  m_FontSize: 60
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2518,7 +2533,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 30
+  m_FontSize: 60
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2541,7 +2556,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 30
+  m_FontSize: 60
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2

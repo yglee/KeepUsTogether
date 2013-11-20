@@ -47,18 +47,18 @@ function OnTriggerStay (other : Collider){
                     other.BroadcastMessage("talking", 1, SendMessageOptions.DontRequireReceiver);
                     //we check each line to see if somethings actually set in the line string before we send the line to the talkGUI
                     if(line1.Length != 0){
-                        talkGUI.BroadcastMessage("lineOne", line1, SendMessageOptions.DontRequireReceiver);
+                        talkGUI.BroadcastMessage("updateLines", line1, SendMessageOptions.DontRequireReceiver);
                     }
-                    if(line2.Length != 0){
-                        talkGUI.BroadcastMessage("lineTwo", line2, SendMessageOptions.DontRequireReceiver);
-                    }
-                    if(line3.Length != 0){
-                        talkGUI.BroadcastMessage("lineThree", line3, SendMessageOptions.DontRequireReceiver);
-                    }
-                    if(line4.Length != 0){
-                        talkGUI.BroadcastMessage("lineFour", line4, SendMessageOptions.DontRequireReceiver);
-                    }
-                    //if talkstate is true, that means the player wants to leave the conversation so we turn everything off instead.
+//                    if(line2.Length != 0){
+//                        talkGUI.BroadcastMessage("lineTwo", line2, SendMessageOptions.DontRequireReceiver);
+//                    }
+//                    if(line3.Length != 0){
+//                        talkGUI.BroadcastMessage("lineThree", line3, SendMessageOptions.DontRequireReceiver);
+//                    }
+//                    if(line4.Length != 0){
+//                        talkGUI.BroadcastMessage("lineFour", line4, SendMessageOptions.DontRequireReceiver);
+//                    }
+                //if talkstate is true, that means the player wants to leave the conversation so we turn everything off instead.
                 }else{
                     talkState = false;
                     talkGUI.guiTexture.enabled = false;
