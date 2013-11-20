@@ -12,9 +12,11 @@ private var talkState = false;
 //we find inv to check to see if its open or not, we can't talk and check inventory at the same time. that would be buggy.
 private var inv:GameObject;
 
-private var trigger = "e";
-
 private var scriptIndex = 0;
+
+//user input maps to the element number.
+private var triggerKeyToElementNumber={};
+
 
 function Start () {
 	//we find the 2 objects that we use to get the conversations going
@@ -25,61 +27,82 @@ function Start () {
 function OnTriggerEnter (other : Collider){
 	if (forceContact && talkState == false && other.name == "Player")
 	{
-		beginInteraction(other);
-		 
+		triggerKeyToElementNumber = {};
+		beginInteraction(other);	 
 		scriptIndex = 0;
 		playScript(scriptIndex);
 	}
 }
 
 function OnTriggerStay (other : Collider){
-	if(other.name == "Player")
-	{
+	if(other.name == "Player") {
 		// if the player presses e, and he's in fact inside the talking collider, we do the talk check stuff
-		if(Input.GetKeyDown(trigger))
-		{
-	
-			//if talkstate is false, that means the player wants to talk, not exit so we set it to true and do stuff
-			if(talkState == false)
-			{
+		var trigger = "";
+		for (var key in triggerKeyToElementNumber.Keys) {
+			if (Input.GetKeyUp(key.ToString())) {	
+				trigger = key.ToString();
+				break;
+			}
+		}
+		if (trigger!= "") {
+			//if talkState is false, this is the first time the player will start the conversation
+			if(talkState == false) {
 				beginInteraction(other);
-				
 				scriptIndex = 0;
 				playScript(scriptIndex);
 			}
-			else //if talkstate is true, that means the player wants continue the conversation until the end of the script array
-			{
-				scriptIndex++;
-				if (scriptIndex < script.Length)
-				{
-					playScript(scriptIndex);
-				}
-				else
-				{
+			else { //if talkstate is true, the player is in the middle of conversation and wants to advance to new conversation page
+				scriptIndex = int.Parse(triggerKeyToElementNumber[trigger]);	
+				if (scriptIndex < 0) {
 					finishInteraction(other);
+				} else {						
+					playScript(scriptIndex);
 				}
 			}
 		}
 	}
 }
 
+private function getBranchNotation(line : String) {
+	var index = 0;
+	for (var i = 1; i< line.Length; i++) {
+		if (line[i] == "*") {
+			index = i;
+			break;
+		}				
+	}
+	
+	triggerKeyToElementNumber = {};
+
+	var branchNotations = line.Substring(1,index-1);
+	var branches = branchNotations.Split(','[0]);
+	
+	for (var branch in branches) {
+		var relationship = branch.ToString().Split('-'[0]);
+		triggerKeyToElementNumber[relationship[0]] = relationship[1];
+		//trigger = relationship[0], and element # = relationship[1];
+	}
+	return index;
+}
+
+
 private function playScript(index : int){
 	//we check each line to see if somethings actually set in the line string before we send the line to the talkGUI
 	if(script.Length != 0 && script[index].Length > 1)
 	{
-		// if there is a '*' at the second char, the first char is the trigger
+		//if * is in the beginning, you can only choose one of the options to go forward in the dialogue.
 		var message = "";
-		if (script[index][1] == "*")
-		{
-			trigger = script[index][0].ToString();
-			message = script[index].Substring(2);
-		}
-		else
-		{
-			trigger = "e";
+		if (script[index][0] == "*") {
+//			trigger = script[index][0].ToString();
+			var secondStarIndex = getBranchNotation(script[index]);
+//			message = script[index].Substring(2);
+			message = script[index].Substring(secondStarIndex+1);
+		} else {
+			triggerKeyToElementNumber = {};
+			triggerKeyToElementNumber["e"] = "-1"; //end of conversation (leaf line)
 			message = script[index];
 		}
-		
+		Debug.Log(message);
 		talkGUI.BroadcastMessage("clearStrings", SendMessageOptions.DontRequireReceiver);
 		talkGUI.BroadcastMessage("updateLines", message, SendMessageOptions.DontRequireReceiver);
 	}
@@ -111,7 +134,6 @@ function beginInteraction(other : Collider)
 function finishInteraction(other : Collider)
 {
 	talkState = false;
-	trigger = "e";
 	talkGUI.guiTexture.enabled = false;
 	SendMessageUpwards("talking", 0, SendMessageOptions.DontRequireReceiver);
 	other.BroadcastMessage("talking", 0, SendMessageOptions.DontRequireReceiver);
