@@ -17,11 +17,25 @@ private var scriptIndex = 0;
 //user input maps to the element number.
 private var triggerKeyToElementNumber={};
 
+private var trigger = "";
+
+
 
 function Start () {
 	//we find the 2 objects that we use to get the conversations going
 	talkGUI = GameObject.Find("GUI/talkbg");
 	inv = GameObject.Find("GUI/inventory");
+}
+
+function Update () {
+	for (var key in triggerKeyToElementNumber.Keys) {
+		// Input check should only be called in Update function and not in any physics function
+		if (Input.GetKeyUp(key.ToString())) {
+			// save the trigger key for checking in OnTriggerStay	
+			trigger = key.ToString();
+			break;
+		}
+	}
 }
 
 function OnTriggerEnter (other : Collider){
@@ -37,13 +51,6 @@ function OnTriggerEnter (other : Collider){
 function OnTriggerStay (other : Collider){
 	if(other.name == "Player") {
 		// if the player presses e, and he's in fact inside the talking collider, we do the talk check stuff
-		var trigger = "";
-		for (var key in triggerKeyToElementNumber.Keys) {
-			if (Input.GetKeyUp(key.ToString())) {	
-				trigger = key.ToString();
-				break;
-			}
-		}
 		if (trigger!= "") {
 			//if talkState is false, this is the first time the player will start the conversation
 			if(talkState == false) {
@@ -59,6 +66,9 @@ function OnTriggerStay (other : Collider){
 					playScript(scriptIndex);
 				}
 			}
+			
+			// set trigger back to empty string
+			trigger = "";
 		}
 	}
 }
