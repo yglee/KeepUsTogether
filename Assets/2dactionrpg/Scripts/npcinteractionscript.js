@@ -149,4 +149,6 @@ function finishInteraction(other : Collider)
 	other.BroadcastMessage("talking", 0, SendMessageOptions.DontRequireReceiver);
 	talkGUI.BroadcastMessage("clearStrings", SendMessageOptions.DontRequireReceiver);
 	SendMessageUpwards("merchantStop", SendMessageOptions.DontRequireReceiver);
+	
+	SendMessageUpwards("stopMoving", SendMessageOptions.DontRequireReceiver);
 }

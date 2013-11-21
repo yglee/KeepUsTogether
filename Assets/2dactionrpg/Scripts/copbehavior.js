@@ -149,7 +149,10 @@ function Update () {
     		var normalizedDirection:Vector3 = directionToPlayer.normalized;
     	
     		rigidbody.velocity = normalizedDirection * speed;
+    	} else {
+    		rigidbody.velocity = Vector3.zero;
     	}
+    	
         /*
          //before we do any of the stuff we need to make sure he's not talking to the player, cant have him walking away in the middle of a "conversation".
          if(isTalking == false){
@@ -207,6 +210,11 @@ function Update () {
     //end of function update
 }
 
+function stopMoving() {
+  	canMove = false;
+  	rigidbody.velocity = Vector3.zero;
+}
+
 //we do some stuff if the npc gets hit by something
 function OnCollisionEnter (other : Collision){
     //if the player runs into the npc, we set beingpushed to true so the npc stops what he was doing before
@@ -238,7 +246,7 @@ function talking (state : float){
 }
 
 //we check the player's direction when getting into a conversation. when this function calls it'll check where the player is in reference to the ncp so we can try to get the npc to face the player.
-function findPlayerDirection () {
+function findPlayerDsrection () {
     var xDist = target.transform.position.x - transform.position.x;
     var zDist = target.transform.position.z - transform.position.z;
     if(xDist < -0.5 && xDist < zDist){
