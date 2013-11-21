@@ -9,6 +9,13 @@ var teleportZ:float;
 //when the player hits the door collider, we want load the new scene and do a couple other things
 function OnCollisionEnter (other : Collision) {
 if(other.collider.tag == "Player"){
+	//Debug.Log("loadedLevelName = "+Application.loadedLevelName);
+	
+	// If we just left the barandbed, we want the cop to chase us
+	if (Application.loadedLevelName == "barandbed") {
+		PlayerPrefs.SetInt("copShouldChase", 1);
+	}
+	
 	//here we find the fader
 	var fader = GameObject.Find("fader");
 	//then tell the fader to fade out before the new scene loads

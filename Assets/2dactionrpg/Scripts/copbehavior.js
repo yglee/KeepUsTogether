@@ -142,7 +142,8 @@ function Update () {
     
     //if the npc can move, we see do some stuff for it.
     if(canMove == true){
-    	if(beingPushed == false && isTalking == false){
+    	
+    	if(beingPushed == false && isTalking == false && PlayerPrefs.GetInt("copShouldChase")){
     		var playerPos:Vector3 = target.transform.position;
     		var myPos:Vector3 = transform.position;
     		var directionToPlayer:Vector3 = playerPos - myPos;
