@@ -118,6 +118,12 @@ function OnTriggerExit (other : Collider){
     canInventory = true;
 }
 
+function OnMouseDown() {
+	// Temporary - Trigger game over when you click on the player
+	var fader = GameObject.Find("fader");
+    fader.BroadcastMessage("setGameOver", SendMessageOptions.DontRequireReceiver);
+}
+
 //this function is called when the player buys something, to make sure that the player can access the inventory again.
 function inventoryFix () {
     yield WaitForSeconds(0.25);

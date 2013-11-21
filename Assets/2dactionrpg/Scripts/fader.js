@@ -27,54 +27,53 @@ function displayAboutJohnText () {
 }
 
 function Update () {
-//if fade in is true, we want the alpha channel of the guitexture to be subtracted. this will make the black texture more transparent over time until its invisible.
-if(fadeIn == true){
-	guiTexture.color.a -= Time.deltaTime/2;
-	//if the alpha channel is equal to or less than 0, we turn the fadein state to false, disable the guiTexture, and make sure alpha is set to exactly zero.
-	if(guiTexture.color.a <= 0.0){
-		fadeIn = false;
-		guiTexture.enabled = false;
-		guiTexture.color.a = 0.0;
-	}
-}
-//if fastFadeOut is true, we want to add alpha back to the black texture to make a fadeout look. this is turned on by a message received that the function FastFadeOut below triggers.
-if(fastFadeOut == true){
-	guiTexture.color.a += Time.deltaTime*2;
-	if(guiTexture.color.a >= 0.5){
-		fadeOut = false;
-	}
-}
-//if gameOver is true, we do a similar fadeout as fastfade out then call the function resetGame(); below to add the game over text, and load the player house scene to start the game over.
-if(gameOver == true){
-	guiTexture.color.a += Time.deltaTime;
-	if(guiTexture.color.a >= 0.5){
-		gameOver = false;
-		resetGame();
-	}
-}
-
-//end of function update
+    //if fade in is true, we want the alpha channel of the guitexture to be subtracted. this will make the black texture more transparent over time until its invisible.
+    if(fadeIn == true){
+        guiTexture.color.a -= Time.deltaTime/2;
+        //if the alpha channel is equal to or less than 0, we turn the fadein state to false, disable the guiTexture, and make sure alpha is set to exactly zero.
+        if(guiTexture.color.a <= 0.0){
+            fadeIn = false;
+            guiTexture.enabled = false;
+            guiTexture.color.a = 0.0;
+        }
+    }
+    //if fastFadeOut is true, we want to add alpha back to the black texture to make a fadeout look. this is turned on by a message received that the function FastFadeOut below triggers.
+    if(fastFadeOut == true){
+        guiTexture.color.a += Time.deltaTime*2;
+        if(guiTexture.color.a >= 0.5){
+            fadeOut = false;
+        }
+    }
+    //if gameOver is true, we do a similar fadeout as fastfade out then call the function resetGame(); below to add the game over text, and load the player house scene to start the game over.
+    if(gameOver == true){
+    	if(guiTexture.color.a < 0.4) {
+        	guiTexture.color.a += Time.deltaTime;
+        } else {
+        	gameOverText.guiText.enabled = true;
+        	
+        	// Get rid of the game over screen and reset the game on keypress
+        	if (Input.GetKey("e") || Input.GetKey("space")) {
+      			gameOver = false;
+      			gameOverText.guiText.enabled = false;
+				//here we load the playerhouse scene to start the game over.
+				PlayerPrefs.DeleteAll();
+				Application.LoadLevel("playerhouse");	
+      		}
+        }
+        
+    }
+    
+    //end of function update
 }
 
 //if we receive a message named FastFadeOut, we set fastfadeout to true and make sure the guiTexture is enabled.
 function FastFadeOut() {
-fastFadeOut = true;
-guiTexture.enabled = true;
+    fastFadeOut = true;
+    guiTexture.enabled = true;
 }
 
 //if we receive a message named setGameOver, we set gameOver to true and make sure the guiTexture is enabled.
 function setGameOver() {
-gameOver = true;
-guiTexture.enabled = true;
-}
-
-//once the fader fades out through gameOver = true, we do some stuff to reset the game.
-function resetGame() {
-	//here we set the text to be enabled.
-	gameOverText.guiText.enabled = true;
-	//we wait for 2 seconds so the text can display for long enough before we disable the text again, and start the game over
-	yield WaitForSeconds(2);
-	gameOverText.guiText.enabled = false;
-	//here we load the playerhouse scene to start the game over.
-	Application.LoadLevel("playerhouse");
+    gameOver = true;
+    guiTexture.enabled = true;
 }
