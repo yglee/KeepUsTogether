@@ -2227,6 +2227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718f0cbfc517e4c589310bb27a4ca17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 1720826746}
 --- !u!1 &1393012334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,6 +2521,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1707633182}
   - 132: {fileID: 1707633183}
+  - 114: {fileID: 1707633184}
   m_Layer: 0
   m_Name: 6GameOverExplanation
   m_TagString: Untagged
@@ -2559,9 +2561,21 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4288736511
   m_PixelCorrect: 0
   m_RichText: 1
+--- !u!114 &1707633184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707633181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1574b3e325c1146b09290d6ddc4c5f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  twitterURL: https://twitter.com/intent/tweet?text=Just%20played%20FWD.us%27s%20%23undocumented%20game%2C%20about%20the%20tough%20life%20of%20an%20undocumented%20immigrant.%20http%3A%2F%2Fwww.facebook.com%2Fundocumented
 --- !u!1 &1720826746
 GameObject:
   m_ObjectHideFlags: 0

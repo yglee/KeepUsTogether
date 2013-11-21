@@ -11,7 +11,9 @@ private var aboutMainCharText:GameObject;
 
 function Start () {
 	//on start we set find the gameovertext so its ready to be used if the player dies
-	gameOverText = GameObject.Find("permanentobjects/GUI/GameOver");
+	var permanentObjectManager = GameObject.Find("permanentobjects").GetComponent(permanentobjectmanager);
+	gameOverText = permanentObjectManager.gameOver;
+	
 	aboutMainCharText = GameObject.Find("permanentobjects/GUI/AboutMainChar");
 	//we make sure the guitexture is enabled before we fade in. this fader is attached to every scene so we have smooth looking transitions during scene changes.
 	guiTexture.enabled = true;
@@ -49,22 +51,28 @@ function Update () {
     	if(guiTexture.color.a < 0.4) {
         	guiTexture.color.a += Time.deltaTime;
         } else {
-        	gameOverText.SetActive(true);
+        	enableGameOver(); // FIX don't do every update
         	
         	// Get rid of the game over screen and reset the game on keypress
         	if (Input.GetKey("e") || Input.GetKey("space")) {
-      			gameOver = false;
-      			gameOverText.SetActive(false);
-      			//gameOverText.enabled = false;
-				//here we load the playerhouse scene to start the game over.
-				PlayerPrefs.DeleteAll();
-				Application.LoadLevel("playerhouse");	
+        		resetGame();
       		}
         }
         
     }
     
     //end of function update
+}
+
+function enableGameOver() {
+	gameOverText.SetActive(true);
+}
+
+function resetGame() {
+	gameOver = false;
+	gameOverText.SetActive(false);
+	PlayerPrefs.DeleteAll();
+	Application.LoadLevel("playerhouse");
 }
 
 //if we receive a message named FastFadeOut, we set fastfadeout to true and make sure the guiTexture is enabled.
