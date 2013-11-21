@@ -14,7 +14,8 @@ private var aboutMainCharParent3:GameObject;
 function Start () {
 	//on start we set find the gameovertext so its ready to be used if the player dies
 	var permanentObjectManager = GameObject.Find("permanentobjects").GetComponent(permanentobjectmanager);
-	gameOverText = GameObject.Find("permanentobjects/GUI/youdiedtext");
+	gameOverText = permanentObjectManager.gameOver;
+	
 	aboutMainCharParent1 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent1");
 	aboutMainCharParent2 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent2");
 	aboutMainCharParent3 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent3");	
