@@ -10,7 +10,7 @@ function Start () {
 
 function Update () {
 	var timeDelta = Time.time-time;
-	if (timeDelta > 10) {
+	if (timeDelta > 5) {
 		//teleport to player house
 		fader.BroadcastMessage("setGameOver", SendMessageOptions.DontRequireReceiver);
 	}
