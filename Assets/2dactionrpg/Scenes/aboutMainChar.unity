@@ -4,12 +4,13 @@
 SceneSettings:
   m_ObjectHideFlags: 0
   m_PVSData: 
+  m_QueryMode: 1
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
-    smallestHole: .25
-    backfaceThreshold: 100
+    viewCellSize: 1
+    bakeMode: 2
+    memoryUsage: 10485760
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
@@ -22,7 +23,6 @@ RenderSettings:
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 0}
   m_ObjectHideFlags: 0
@@ -146,6 +146,7 @@ GameObject:
   - 92: {fileID: 1249197926}
   - 124: {fileID: 1249197925}
   - 81: {fileID: 1249197924}
+  - 114: {fileID: 1249197929}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -202,7 +203,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
-  m_OcclusionCulling: 1
 --- !u!4 &1249197928
 Transform:
   m_ObjectHideFlags: 0
@@ -214,6 +214,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1249197929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249197923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c5f399c1b60438eba91ed9b0115add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2100138422
 Prefab:
   m_ObjectHideFlags: 0
