@@ -451,6 +451,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 
+--- !u!1 &145976902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 145976903}
+  - 132: {fileID: 145976904}
+  m_Layer: 0
+  m_Name: 4GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145976903
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 145976902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.0500000007, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &145976904
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 145976902}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: use this tool and make your voice heard.
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &149884644
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +624,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 
+--- !u!1 &208724405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 208724406}
+  - 132: {fileID: 208724407}
+  m_Layer: 0
+  m_Name: 5GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208724406
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208724405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.200000003, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &208724407
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208724405}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: tweet your local representative and tell them
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &218219909
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +1037,57 @@ GUIText:
   m_Font: {fileID: 12800000, guid: 05d633a91a5b84e408ad3d64f82efa5c, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 100
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
+--- !u!1 &384212002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 384212003}
+  - 132: {fileID: 384212004}
+  m_Layer: 0
+  m_Name: 3GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384212003
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384212002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .0500000007, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &384212004
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384212002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: You can make a difference, take action, act now,
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1554,7 +1707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1082774467}
-  - {fileID: 917519056}
+  - {fileID: 1720826747}
   - {fileID: 846119180}
   - {fileID: 1404948511}
   - {fileID: 480359767}
@@ -1573,7 +1726,7 @@ GameObject:
   - 4: {fileID: 917519056}
   - 132: {fileID: 917519057}
   m_Layer: 0
-  m_Name: youdiedtext
+  m_Name: 0GameOverTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1586,10 +1739,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 917519055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 11}
-  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_LocalPosition: {x: 0, y: .400000006, z: 11}
+  m_LocalScale: {x: .124999993, y: .25, z: 1}
   m_Children: []
-  m_Father: {fileID: 913592451}
+  m_Father: {fileID: 1720826747}
 --- !u!132 &917519057
 GUIText:
   m_ObjectHideFlags: 0
@@ -1597,9 +1750,9 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 917519055}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: You Died
+  m_Text: You're in Jail
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -2358,6 +2511,90 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 
+--- !u!1 &1707633181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1707633182}
+  - 132: {fileID: 1707633183}
+  m_Layer: 0
+  m_Name: 6GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1707633182
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707633181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.300000012, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &1707633183
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707633181}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: "\u201CI support #immigration reform, the #timeisnow #readyforreform\u201D"
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
+--- !u!1 &1720826746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1720826747}
+  m_Layer: 0
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1720826747
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720826746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1959479178}
+  - {fileID: 1779877883}
+  - {fileID: 917519056}
+  - {fileID: 384212003}
+  - {fileID: 145976903}
+  - {fileID: 208724406}
+  - {fileID: 1707633182}
+  m_Father: {fileID: 913592451}
 --- !u!1 &1743240779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,6 +2646,57 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 0
   m_RichText: 0
+--- !u!1 &1779877882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1779877883}
+  - 132: {fileID: 1779877884}
+  m_Layer: 0
+  m_Name: 2GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779877883
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779877882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .150000006, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &1779877884
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779877882}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: everyday in the lives of our community.
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &1864585124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +2819,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 
+--- !u!1 &1959479177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1959479178}
+  - 132: {fileID: 1959479179}
+  m_Layer: 0
+  m_Name: 1GameOverExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959479178
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959479177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .25, z: 11}
+  m_LocalScale: {x: .124999985, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1720826747}
+--- !u!132 &1959479179
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959479177}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: "John\u2019s story is one of many stories that happen"
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &2036039275
 GameObject:
   m_ObjectHideFlags: 0
