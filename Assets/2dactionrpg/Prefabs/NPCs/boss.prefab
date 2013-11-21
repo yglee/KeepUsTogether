@@ -111,13 +111,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d0ee2addf634b64a6c9ec362ebb430, type: 3}
+  m_Script: {fileID: 11500000, guid: 2757ccc2b16c04e3bbba282134d9bffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line1: 'Hello! What is '
-  line2: your name?
-  line3: Fine! Don't talk
-  line4: to me!
+  script:
+  - "*1-1, 2-2* You arrive at work. You can\u2019t wait to see your daughter\u2019s
+    dance recital after 7:00 pm. Your boss tells you that you need to work 8 extra
+    hours, without overtime pay. What do you do?/ 1:Ok boss, I will work the extra
+    hours./ 2:Ok, but you haven\u2019t paid me in the last 2 week. Will you pay me
+    this time?"
+  - "That\u2019s a good immigrant! Too bad you will miss your daughter\u2019s dance
+    recital."
+  - "*1-1,2-3* You are undocumented! Do you want me to call immigration on you?!/
+    1: Ok, no, I will work the extra hours./ 2: I\u2019m gonna report you to the Department
+    of Labor."
+  - "Hey hey, there\u2019s no need for that. Go see your daughter\u2019s dance recital."
+  forceContact: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

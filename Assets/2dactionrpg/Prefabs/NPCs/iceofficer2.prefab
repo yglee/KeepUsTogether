@@ -126,13 +126,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d0ee2addf634b64a6c9ec362ebb430, type: 3}
+  m_Script: {fileID: 11500000, guid: 2757ccc2b16c04e3bbba282134d9bffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line1: Buy somethin'
-  line2: will ya!
-  line3: 
-  line4: 
+  script:
+  - "*1-1,2-2,3-3* Cha-Ching! Profiting on people\u2019s pain! All on the taxpayer
+    dollar./ 1:Can I call my daughter?/ 2: I\u2019m so upset! All I can do is cry./
+    3:Officer, I\u2019m afraid to go back to my country for legitimate reasons.\n"
+  - ' Looks like your little girl is growing up to be an activist. She just started
+    calling local organizations and legislators.'
+  - "You are now lost in our Deportation Profit Machine. You won\u2019t have a court
+    date because the private prisons want to make money from you."
+  - Ok, ok, I will grant you a hearing to establish credible fear of returning to
+    the foreign country.
+  forceContact: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

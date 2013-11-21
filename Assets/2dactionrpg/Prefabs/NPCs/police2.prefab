@@ -111,13 +111,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d0ee2addf634b64a6c9ec362ebb430, type: 3}
+  m_Script: {fileID: 11500000, guid: 2757ccc2b16c04e3bbba282134d9bffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line1: 'You can only '
-  line2: 'hold one potion '
-  line3: at a time, so use
-  line4: it wisely!
+  script:
+  - "*1-1,2-2,3-3,4-4* You drive to your daughter\u2019s dance recital. You get pulled
+    over. The officer asks \u201CLicense and Registration?\u201D/ 1:I will not speak.
+    I have legal representation./ 2:Here\u2019s my passport./ 3:Here is my ID (fake
+    ID)./ 4:I don\u2019t have a license.\n"
+  - 'I have to arrest you because you are not proving you can drive legally.
+
+'
+  - "So you\u2019re not born here? You are not American. I think you\u2019re undocumented.
+    You are under arrest."
+  - "This looks fake. I\u2019m gonna take you in on a felony charge.\n"
+  - Ok, you did not lie, but I still have to take you in.
+  forceContact: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

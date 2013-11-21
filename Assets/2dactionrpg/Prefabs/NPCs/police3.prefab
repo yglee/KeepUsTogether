@@ -8,8 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400002}
-  - 135: {fileID: 13500002}
+  - 114: {fileID: 11400000}
+  - 135: {fileID: 13500000}
   m_Layer: 0
   m_Name: talktrigger
   m_TagString: npc
@@ -27,13 +27,11 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 135: {fileID: 13500000}
-  - 114: {fileID: 11400000}
+  - 135: {fileID: 13500002}
+  - 114: {fileID: 11400002}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11400006}
-  - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: iceofficer1
+  m_Name: police3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 1.15202333e-07, y: .707106769, z: .707106888, w: -1.15202319e-07}
-  m_LocalPosition: {x: 2.00000143, y: .499999881, z: 3.99999809}
+  m_LocalPosition: {x: -16.0510464, y: .499998271, z: 11.0000057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -74,7 +72,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: bfdcf2c94d18e464a98659ba77c92ef6, type: 2}
+  - {fileID: 2100000, guid: 4d4460c4993958847a482fe292ad1848, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -101,24 +99,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeaef5e03319da0438b7ec9aed856eca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blacksmith1: {fileID: 2800000, guid: 050a0aa7c1f704545b87b432b7f0e4f6, type: 3}
-  blacksmith2: {fileID: 2800000, guid: e406e7037accb6c4abc6fd2a6e6d9796, type: 3}
---- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -130,18 +115,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - "*1-1,2-2* You are now in our custody and on a fast track to deportation. Sign
-    this ICE form so we can \u201Crelease\u201D you./ 1: Can I have this form in my
-    native language?/ 2: Ok, I will sign. Just please let me go."
-  - '*1-3,2-2* No! This is America! We speak English./ 1:Ok, I want my case to be
-    heard in front of a judge./ 2:Ok sir, I will sign it.
-
-'
-  - You dumb immigrant! You just signed your rights away. You will now be deported
-    and unable to see your daughter for 10 years
-  - "It\u2019s hard to deport you! Fine, you will get your hearing in front of a judge.\n"
+  - "*1-1,2-2* We\u2019re gonna take your fingerprints and we called ICE to get you.
+    They have 48 hours, but it has already been 50 hours since we called./ 1:I demand
+    a bond hearing./ 2:I have a family. Please let me go!\n"
+  - Huh? A smart immigrant? Ok, fine, we will grant your request for a bond hearing.
+  - Too late. ICE is already here!
   forceContact: 0
---- !u!114 &11400004
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -149,39 +129,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd89e3779ff3ac94396729828c904462, type: 3}
+  m_Script: {fileID: 11500000, guid: 66d86a48ced84476b9f5ff73c21c107b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 
-  price: 0
-  quantity: 0
-  singlePurchase: 1
-  priceText: {fileID: 0}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1776bc65f054ede8c306bb1d315789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  staticPosition: 1
+  canMove: 1
+  idleLeft: {fileID: 2800000, guid: ed765013534307f4eb54b1e382e13fc0, type: 3}
+  idleRight: {fileID: 2800000, guid: 1f87118e57253684a906ba06b22dba0a, type: 3}
+  idleUp: {fileID: 2800000, guid: eb44bb014c492f54cbd2b4ee398f5149, type: 3}
+  idleDown: {fileID: 2800000, guid: c3a8db328879c124caa5250be32b7abf, type: 3}
+  left1: {fileID: 2800000, guid: 6f78e87d71c9b38459ef48003e9fca21, type: 3}
+  left2: {fileID: 2800000, guid: 32f6df6a09499e844b16f1086d006049, type: 3}
+  right1: {fileID: 2800000, guid: ffcb152632124d5429a1749a168de300, type: 3}
+  right2: {fileID: 2800000, guid: 9ffc9cae8add3ab4e991684d9c63350d, type: 3}
+  up1: {fileID: 2800000, guid: c7f79ff96b082264981fc17836430c79, type: 3}
+  up2: {fileID: 2800000, guid: 8957bb4e75dbffb42ad9758a6b99b232, type: 3}
+  down1: {fileID: 2800000, guid: 8e3147afa6e959948b530103fea472e4, type: 3}
+  down2: {fileID: 2800000, guid: b5100de07d0635649b422138e1189b14, type: 3}
+  speed: 2
 --- !u!135 &13500000
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Material: {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: -.5, z: 0}
---- !u!135 &13500002
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -193,6 +158,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.75
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &13500002
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: -.5, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

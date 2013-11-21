@@ -111,13 +111,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d0ee2addf634b64a6c9ec362ebb430, type: 3}
+  m_Script: {fileID: 11500000, guid: 2757ccc2b16c04e3bbba282134d9bffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line1: 'You can only '
-  line2: 'hold one potion '
-  line3: at a time, so use
-  line4: it wisely!
+  script:
+  - '*1-1,2-2,3-3* Are you a US Citizen?/ 1:Yes/ 2:Am I under Arrest?/ 3:No
+
+'
+  - I know you lied. You are now under arrest.
+  - "I don\u2019t have any more reason to hold you. You are free to leave."
+  - I have reasonable suspicion to believe you are undocumented. You are under arrest.
+  forceContact: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
