@@ -5,6 +5,10 @@ var script:String[];
 
 var forceContact = false;
 
+var teleportToJailX:float;
+var teleportToJailZ:float;
+var sceneName:String;
+
 //we find the talkGUI gameobject so we can activate it when needed. its the visual box with 4 text lines attached to it.
 private var talkGUI:GameObject;
 //we use this state to either enter or exit talking with the same button
@@ -16,9 +20,7 @@ private var scriptIndex = 0;
 
 //user input maps to the element number.
 private var triggerKeyToElementNumber={};
-
 private var trigger = "";
-
 
 
 function Start () {
@@ -61,7 +63,11 @@ function OnTriggerStay (other : Collider){
 			else { //if talkstate is true, the player is in the middle of conversation and wants to advance to new conversation page
 				scriptIndex = int.Parse(triggerKeyToElementNumber[trigger]);	
 				if (scriptIndex < 0) {
-					finishInteraction(other);
+					if (scriptIndex == -1) {
+						finishInteraction(other, false);
+					} else { //jail
+						finishInteraction(other, true);
+					}
 				} else {						
 					playScript(scriptIndex);
 				}
@@ -89,7 +95,11 @@ private function getBranchNotation(line : String) {
 	
 	for (var branch in branches) {
 		var relationship = branch.ToString().Split('-'[0]);
-		triggerKeyToElementNumber[relationship[0]] = relationship[1];
+		if (relationship[1] == 'j') {
+			triggerKeyToElementNumber[relationship[0]] = "-2"; 
+		} else {
+			triggerKeyToElementNumber[relationship[0]] = relationship[1];
+		}
 	}
 	return index;
 }
@@ -108,6 +118,7 @@ private function playScript(index : int){
 			triggerKeyToElementNumber = {};
 			triggerKeyToElementNumber["e"] = "-1"; //end of conversation (leaf line)
 			message = script[index];
+			
 		}
 		talkGUI.BroadcastMessage("clearStrings", SendMessageOptions.DontRequireReceiver);
 		talkGUI.BroadcastMessage("updateLines", message, SendMessageOptions.DontRequireReceiver);
@@ -137,7 +148,7 @@ function beginInteraction(other : Collider)
 	other.BroadcastMessage("talking", 1, SendMessageOptions.DontRequireReceiver);
 }
 
-function finishInteraction(other : Collider)
+function finishInteraction(other : Collider, teleportToJail : boolean)
 {
 	forceContact = false; // Don't allow another interaction to begin in this scene.
 	
@@ -149,4 +160,12 @@ function finishInteraction(other : Collider)
 	SendMessageUpwards("merchantStop", SendMessageOptions.DontRequireReceiver);
 	
 	SendMessageUpwards("stopMoving", SendMessageOptions.DontRequireReceiver);
+	
+	if (teleportToJail) {
+		//teleport here.
+		other.transform.position.x = teleportToJailX;
+		other.transform.position.z = teleportToJailZ;
+		//then low the scene we want.
+		Application.LoadLevel(sceneName);
+	}
 }
