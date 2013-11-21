@@ -142,12 +142,14 @@ function Update () {
     
     //if the npc can move, we see do some stuff for it.
     if(canMove == true){
-    	var playerPos:Vector3 = target.transform.position;
-    	var myPos:Vector3 = transform.position;
-    	var directionToPlayer:Vector3 = playerPos - myPos;
-    	var normalizedDirection:Vector3 = directionToPlayer.normalized;
+    	if(beingPushed == false && isTalking == false){
+    		var playerPos:Vector3 = target.transform.position;
+    		var myPos:Vector3 = transform.position;
+    		var directionToPlayer:Vector3 = playerPos - myPos;
+    		var normalizedDirection:Vector3 = directionToPlayer.normalized;
     	
-    	rigidbody.velocity = normalizedDirection * speed;
+    		rigidbody.velocity = normalizedDirection * speed;
+    	}
         /*
          //before we do any of the stuff we need to make sure he's not talking to the player, cant have him walking away in the middle of a "conversation".
          if(isTalking == false){
