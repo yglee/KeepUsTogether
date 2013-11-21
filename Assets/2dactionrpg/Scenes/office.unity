@@ -16220,7 +16220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - "*e-1*Boss: I need you to work 8 extra hours tonight. I can\u2019t pay you overtime,
+  - "*e-1*Boss: I need you to work 8 extra hours tonight./I can\u2019t pay you overtime,
     unfortunately."
   - "*1-3,2-2,3-3*1: No I can\u2019t, it's my daughter\u2019s recital/2: Ok boss,
     I will work the extra hours/3: Ok but you haven\u2019t paid me in the last two
