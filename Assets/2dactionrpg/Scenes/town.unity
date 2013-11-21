@@ -1202,8 +1202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - '*1-1,2-2,3-3* Are you a US Citizen?/ 1:Yes/ 2:Am I under Arrest? /3:No'
-  - '*e-j*I know you lied. You are now under arrest.'
+  - '*1-1,2-2,3-3*Are you a US Citizen?/1:Yes/2:Am I under Arrest? /3:No'
+  - '*e-j*I don''t believe you. You are now under arrest.'
   - "I don\u2019t have any more reason to hold you. You are free to leave."
   - '*e-j*I have reasonable suspicion to believe you are undocumented. You are under
     arrest.'

@@ -32,7 +32,7 @@ private var line4State = false;
 //this counter keeps track of time.
 private var counter = 0.0;
 //this variable manages how long to pause before it does the next letter.
-private var letterPause = 0.05;
+private var letterPause = 0.03;
 //these next 5 variables switch so only one npc can be talked to at a time, otherwise this could receive 2 npc strings at once and really mess up the game.
 private var canTalk = false;
 private var canReceive1 = true;

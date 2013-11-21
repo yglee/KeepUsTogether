@@ -16220,16 +16220,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - '*e-1*Boss: You need to work 8 extra hours without overtime pay tonight. '
-  - "*1-3,2-2,3-3* You: 1: No I can\u2019t, it's my daughter\u2019s recital/ 2: Ok
-    boss, I will work the extra hours/3: Ok but you haven\u2019t paid me in the last
-    two weeks. Will you pay me this time?"
+  - "*e-1*Boss: I need you to work 8 extra hours tonight. I can\u2019t pay you overtime,
+    unfortunately."
+  - "*1-3,2-2,3-3*1: No I can\u2019t, it's my daughter\u2019s recital/2: Ok boss,
+    I will work the extra hours/3: Ok but you haven\u2019t paid me in the last two
+    weeks. Will you pay me this time? "
   - "That\u2019s a good immigrant! Too bad you will miss your daughter\u2019s dance
     recital."
-  - "*1-2,2-4* Do you want me to call immigration on you?!/ 1: Ok, no, I will work
-    the extra hours./ 2: I\u2019m gonna report you to the Department of Labor.\n"
+  - "*1-2,2-4*Do you want me to call immigration on you?!/1: Ok, no, I will work the
+    extra hours./2: I\u2019m gonna report you to the Department of Labor. "
   - "Hey hey, there\u2019s no need for that. Go see your daughter\u2019s dance recital."
   forceContact: 1
+  teleportToJailX: 0
+  teleportToJailZ: 0
+  sceneName: 
 --- !u!1001 &1684683237
 Prefab:
   m_ObjectHideFlags: 0
