@@ -9,6 +9,7 @@ Material:
   m_Name: police
   m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -16,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: c3a8db328879c124caa5250be32b7abf, type: 3}
+          m_Texture: {fileID: 2800000, guid: 9c07ad3d9df1643f6830ff76a8a190ac, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

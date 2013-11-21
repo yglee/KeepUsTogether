@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song1: {fileID: 8300000, guid: 4ef2d1e16ef1f4c809374ccff1b3a881, type: 3}
-  song2: {fileID: 8300000, guid: 5e133cdec9c5b415ab00e4fd017f7af2, type: 3}
+  song2: {fileID: 8300000, guid: 029b13785999e41d685f8f5e3d373ae7, type: 3}
 --- !u!82 &76352146
 AudioSource:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 76352144}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 4ef2d1e16ef1f4c809374ccff1b3a881, type: 3}
   m_PlayOnAwake: 1

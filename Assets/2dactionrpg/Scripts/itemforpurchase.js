@@ -9,7 +9,7 @@ var quantity:int = 0;
 //this is to check to see if this item can only be purchased once. 
 var singlePurchase = true;
 //this is the text that shows what the price is.
-var priceText:GameObject;
+//var priceText:GameObject;
 
 function Start () {
 //if single purchase is true and the itemid's saved variable is greater than 0, we take it away because it can't be purchased again
@@ -17,11 +17,11 @@ if(singlePurchase == true && PlayerPrefs.GetFloat(itemId) > 0){
 gameObject.SetActive(false);
 }
 //if we don't have enough money, we change the color of the price text so it indicates that you have enough money or not.
-if(PlayerPrefs.GetFloat("money") < price){
-priceText.GetComponent(MeshRenderer).material.color = Vector4(1,0,0,1);
-}else{
-priceText.GetComponent(MeshRenderer).material.color = Vector4(0,1,0,1);
-}
+//if(PlayerPrefs.GetFloat("money") < price){
+//priceText.GetComponent(MeshRenderer).material.color = Vector4(1,0,0,1);
+//}else{
+//priceText.GetComponent(MeshRenderer).material.color = Vector4(0,1,0,1);
+//}
 }
 
 
