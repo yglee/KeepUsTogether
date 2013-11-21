@@ -40,11 +40,13 @@ sword.SetActive(false);
 function Update () {
 //if we're not attacking, but the player presses spacebar, we get attacking stuff going.
 if(attacking == false){
+/* no sword strike :(
 if(Input.GetKeyDown("space")){
 animScript.strike();
 controlScript.strike();
 strike();
 }
+*/
 }
 }
 
