@@ -143,6 +143,8 @@ function beginInteraction(other : Collider)
 
 function finishInteraction(other : Collider)
 {
+	forceContact = false; // Don't allow another interaction to begin in this scene.
+	
 	talkState = false;
 	talkGUI.guiTexture.enabled = false;
 	SendMessageUpwards("talking", 0, SendMessageOptions.DontRequireReceiver);
