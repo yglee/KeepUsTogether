@@ -16,6 +16,7 @@ Application.LoadLevel("playerhouse");
 if(GUI.Button(Rect(Screen.width/3,Screen.height/5*3,Screen.width/3,Screen.height/5), blankGfx, "")){
 //This deletes all PlayerPrefs saved during the game such as gems, weapons purchased, and opened chests.
 PlayerPrefs.DeleteAll();
-Application.LoadLevel("playerhouse");
+
+Application.LoadLevel("aboutMainChar");
 }
 }

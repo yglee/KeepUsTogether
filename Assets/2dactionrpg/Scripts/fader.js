@@ -7,12 +7,23 @@ private var fastFadeOut = false;
 private var gameOver = false;
 //game over text that this finds and only shows when a message is received by the player that it died.
 private var gameOverText:GameObject;
+private var aboutMainCharText:GameObject;
 
 function Start () {
-//on start we set find the gameovertext so its ready to be used if the player dies
-gameOverText = GameObject.Find("permanentobjects/GUI/youdiedtext");
-//we make sure the guitexture is enabled before we fade in. this fader is attached to every scene so we have smooth looking transitions during scene changes.
-guiTexture.enabled = true;
+	//on start we set find the gameovertext so its ready to be used if the player dies
+	gameOverText = GameObject.Find("permanentobjects/GUI/youdiedtext");
+	aboutMainCharText = GameObject.Find("permanentobjects/GUI/AboutMainChar");
+	//we make sure the guitexture is enabled before we fade in. this fader is attached to every scene so we have smooth looking transitions during scene changes.
+	guiTexture.enabled = true;
+}
+
+function displayAboutJohnText () {
+	fastFadeOut = true;
+	guiTexture.enabled = true;
+	aboutMainCharText.guiText.enabled = true;
+	//we wait for 2 seconds so the text can display for long enough before we disable the text again, and start the game over
+	yield WaitForSeconds(10);
+	aboutMainCharText.guiText.enabled = false;
 }
 
 function Update () {
@@ -59,11 +70,11 @@ guiTexture.enabled = true;
 
 //once the fader fades out through gameOver = true, we do some stuff to reset the game.
 function resetGame() {
-//here we set the text to be enabled.
-gameOverText.guiText.enabled = true;
-//we wait for 2 seconds so the text can display for long enough before we disable the text again, and start the game over
-yield WaitForSeconds(2);
-gameOverText.guiText.enabled = false;
-//here we load the playerhouse scene to start the game over.
-Application.LoadLevel("playerhouse");
+	//here we set the text to be enabled.
+	gameOverText.guiText.enabled = true;
+	//we wait for 2 seconds so the text can display for long enough before we disable the text again, and start the game over
+	yield WaitForSeconds(2);
+	gameOverText.guiText.enabled = false;
+	//here we load the playerhouse scene to start the game over.
+	Application.LoadLevel("playerhouse");
 }

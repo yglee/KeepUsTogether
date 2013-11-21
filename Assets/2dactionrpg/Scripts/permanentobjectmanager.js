@@ -13,7 +13,11 @@ function OnLevelWasLoaded () {
 if(Application.loadedLevelName == "menu"){
 //we create an array of all the objects that are children, then deactivate all of them if its the menu.
 	for( var i = 0; i < transform.childCount; ++i ){
-		transform.GetChild(i).gameObject.SetActive(false);
+		if (transform.GetChild(i).gameObject.name == "AboutMainChar") {
+			continue;
+		} else {
+			transform.GetChild(i).gameObject.SetActive(false);
+		}
 	}
 //if the scene is not the menu, we make sure all children are activated using the same process above.
 }else{
