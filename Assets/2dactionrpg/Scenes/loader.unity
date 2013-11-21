@@ -945,7 +945,7 @@ GameObject:
   - 4: {fileID: 227583801}
   - 132: {fileID: 227583802}
   m_Layer: 0
-  m_Name: AboutMainCharParent3
+  m_Name: AboutMainChar3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,10 +958,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227583800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .400000006, z: 11}
+  m_LocalPosition: {x: 0, y: -.25, z: 11}
   m_LocalScale: {x: .125, y: .25, z: 1}
   m_Children: []
-  m_Father: {fileID: 913592451}
+  m_Father: {fileID: 1489175155}
 --- !u!132 &227583802
 GUIText:
   m_ObjectHideFlags: 0
@@ -969,10 +969,9 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227583800}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: "daughter\u2019s big dance recital tonight. You are planning to attend the
-    recital after work."
+  m_Text: "You are looking forward to your daughter\u2019s big dance"
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -980,7 +979,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 40
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1447,6 +1446,57 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &819253944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100076, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 819253945}
+  - 132: {fileID: 819253946}
+  m_Layer: 0
+  m_Name: AboutMainChar0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &819253945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400076, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819253944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .150000006, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1489175155}
+--- !u!132 &819253946
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200020, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819253944}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Welcome, John
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 80
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &834523920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,9 +1691,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1082774467}
-  - {fileID: 1467013301}
-  - {fileID: 227583801}
+  - {fileID: 1489175155}
   - {fileID: 1014240711}
   - {fileID: 917519056}
   - {fileID: 846119180}
@@ -1696,6 +1744,57 @@ GUIText:
   m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 80
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
+--- !u!1 &956005565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100086, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 956005566}
+  - 132: {fileID: 956005567}
+  m_Layer: 0
+  m_Name: AboutMainChar5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956005566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400086, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956005565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.5, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1489175155}
+--- !u!132 &956005567
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200028, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956005565}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Good luck!
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1856,7 +1955,7 @@ GameObject:
   - 4: {fileID: 1082774467}
   - 132: {fileID: 1082774468}
   m_Layer: 0
-  m_Name: AboutMainCharParent1
+  m_Name: AboutMainChar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1869,10 +1968,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082774466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .569999993, z: 11}
+  m_LocalPosition: {x: 0, y: -.0500000007, z: 11}
   m_LocalScale: {x: .125, y: .25, z: 1}
   m_Children: []
-  m_Father: {fileID: 913592451}
+  m_Father: {fileID: 1489175155}
 --- !u!132 &1082774468
 GUIText:
   m_ObjectHideFlags: 0
@@ -1880,10 +1979,9 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082774466}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: "You are a single father. You have an 8 year old daughter. You work 2 jobs
-    \n"
+  m_Text: You are a single father. You have an 8 year old daughter.
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -1891,7 +1989,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 40
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2186,6 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718f0cbfc517e4c589310bb27a4ca17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aboutMainChar: {fileID: 1489175154}
   gameOver: {fileID: 1014240710}
 --- !u!1 &1393012334
 GameObject:
@@ -2248,7 +2347,7 @@ GameObject:
   - 4: {fileID: 1467013301}
   - 132: {fileID: 1467013302}
   m_Layer: 0
-  m_Name: AboutMainCharParent2
+  m_Name: AboutMainChar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2261,10 +2360,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467013300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 11}
+  m_LocalPosition: {x: 0, y: -.150000006, z: 11}
   m_LocalScale: {x: .125, y: .25, z: 1}
   m_Children: []
-  m_Father: {fileID: 913592451}
+  m_Father: {fileID: 1489175155}
 --- !u!132 &1467013302
 GUIText:
   m_ObjectHideFlags: 0
@@ -2272,9 +2371,9 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467013300}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'to provide food & shelter for your family. You are looking forward to your '
+  m_Text: You work 2 jobs to provide food & shelter for your family.
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -2282,13 +2381,45 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 40
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
   m_PixelCorrect: 0
   m_RichText: 1
+--- !u!1 &1489175154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1489175155}
+  m_Layer: 0
+  m_Name: AboutMainChar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1489175155
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489175154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .699999988, z: 11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 819253945}
+  - {fileID: 1082774467}
+  - {fileID: 1467013301}
+  - {fileID: 227583801}
+  - {fileID: 1914049417}
+  - {fileID: 956005566}
+  m_Father: {fileID: 913592451}
 --- !u!1 &1577969355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +2833,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: potion
+--- !u!1 &1914049416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100086, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1914049417}
+  - 132: {fileID: 1914049418}
+  m_Layer: 0
+  m_Name: AboutMainChar4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914049417
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400086, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1914049416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.349999994, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1489175155}
+--- !u!132 &1914049418
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200028, guid: 30009577fc66646a8b602e412cf37f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1914049416}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: "recital, which you\u2019ll attend after work."
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &1940778498
 GameObject:
   m_ObjectHideFlags: 0

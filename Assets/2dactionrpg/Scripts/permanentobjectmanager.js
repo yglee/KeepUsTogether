@@ -3,6 +3,7 @@
 //this is the script that manages objects that carry over to all scenes like the gui stuff, the player, etc. 
 //all objects that are children of the object that this script is attached to will carry over into all scenes.
 
+var aboutMainChar:GameObject;
 var gameOver:GameObject;
 
 function Start () {
