@@ -116,7 +116,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -666,7 +666,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -2233,7 +2233,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -2687,7 +2687,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -2751,7 +2751,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
