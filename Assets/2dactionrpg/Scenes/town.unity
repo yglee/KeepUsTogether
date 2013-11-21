@@ -12627,7 +12627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0011c54ca862841a3a7c7fe92ff72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: barandbed
+  sceneName: office
   teleportX: 0
   teleportZ: -2
 --- !u!65 &263160081
@@ -22450,15 +22450,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
       propertyPath: sceneName
-      value: jail
+      value: office
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
       propertyPath: teleportX
-      value: 0
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
       propertyPath: teleportZ
-      value: 2
+      value: -16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
@@ -40008,9 +40008,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0011c54ca862841a3a7c7fe92ff72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: jail
-  teleportX: 0
-  teleportZ: 2
+  sceneName: office
+  teleportX: -14
+  teleportZ: -16
 --- !u!65 &855946106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76856,7 +76856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
       propertyPath: sceneName
-      value: barandbed
+      value: office
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 5fd146f0e471f6647986976546b89e9d, type: 2}
       propertyPath: teleportZ
