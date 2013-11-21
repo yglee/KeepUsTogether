@@ -29,3 +29,5 @@ EditorBuildSettings:
     path: Assets/2dactionrpg/Scenes/monsterarea.unity
   - enabled: 1
     path: Assets/2dactionrpg/Scenes/jail.unity
+  - enabled: 1
+    path: Assets/2dactionrpg/Scenes/office.unity

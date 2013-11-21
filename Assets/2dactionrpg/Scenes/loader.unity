@@ -1637,7 +1637,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007374672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.519999981, y: .119999997, z: 1}
+  m_LocalPosition: {x: -.600000024, y: .119999997, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 2065495404}
@@ -2097,7 +2097,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393012334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.519999981, y: -.0399999991, z: 1}
+  m_LocalPosition: {x: -.600000024, y: -.0399999991, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 2065495404}
@@ -2269,7 +2269,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656220679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.519999981, y: -.119999997, z: 1}
+  m_LocalPosition: {x: -.600000024, y: -.119999997, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 2065495404}
@@ -2381,7 +2381,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743240779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.519999981, y: .0399999991, z: 1}
+  m_LocalPosition: {x: -.600000024, y: .0399999991, z: 1}
   m_LocalScale: {x: .180000007, y: .180000007, z: 1}
   m_Children: []
   m_Father: {fileID: 2065495404}
@@ -2692,7 +2692,7 @@ MonoBehaviour:
   line2GUI: {fileID: 1743240781}
   line3GUI: {fileID: 1393012336}
   line4GUI: {fileID: 1656220681}
-  lineLimit: 35
+  lineLimit: 50
   talkSound: {fileID: 8300000, guid: 3471f318f8f4942918588b910ef66257, type: 3}
 --- !u!82 &2065495407
 AudioSource:
@@ -2777,10 +2777,10 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: -20
-    y: 10
-    width: 50
-    height: -50
+    x: -46
+    y: 0
+    width: 140
+    height: -20
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0

@@ -90,7 +90,6 @@ private function getBranchNotation(line : String) {
 	for (var branch in branches) {
 		var relationship = branch.ToString().Split('-'[0]);
 		triggerKeyToElementNumber[relationship[0]] = relationship[1];
-		//trigger = relationship[0], and element # = relationship[1];
 	}
 	return index;
 }
@@ -103,16 +102,13 @@ private function playScript(index : int){
 		//if * is in the beginning, you can only choose one of the options to go forward in the dialogue.
 		var message = "";
 		if (script[index][0] == "*") {
-//			trigger = script[index][0].ToString();
 			var secondStarIndex = getBranchNotation(script[index]);
-//			message = script[index].Substring(2);
 			message = script[index].Substring(secondStarIndex+1);
 		} else {
 			triggerKeyToElementNumber = {};
 			triggerKeyToElementNumber["e"] = "-1"; //end of conversation (leaf line)
 			message = script[index];
 		}
-		Debug.Log(message);
 		talkGUI.BroadcastMessage("clearStrings", SendMessageOptions.DontRequireReceiver);
 		talkGUI.BroadcastMessage("updateLines", message, SendMessageOptions.DontRequireReceiver);
 	}

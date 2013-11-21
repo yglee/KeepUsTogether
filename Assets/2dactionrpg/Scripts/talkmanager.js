@@ -9,7 +9,7 @@ var line2GUI:GUIText;
 var line3GUI:GUIText;
 var line4GUI:GUIText;
 
-var lineLimit = 35;
+var lineLimit = 50;
 //this is the really short beep sounds that plays each time a letter is added while talking.
 var talkSound:AudioClip;
 
