@@ -12,7 +12,7 @@ if(other.collider.tag == "Player"){
 	//Debug.Log("loadedLevelName = "+Application.loadedLevelName);
 	
 	// If we just left the barandbed, we want the cop to chase us
-	if (Application.loadedLevelName == "barandbed") {
+	if (Application.loadedLevelName == "office") {
 		PlayerPrefs.SetInt("copShouldChase", 1);
 	}
 	

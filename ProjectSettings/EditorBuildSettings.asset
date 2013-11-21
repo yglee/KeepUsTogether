@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2dactionrpg/Scenes/loader.unity
   - enabled: 1
+    path: Assets/2dactionrpg/Scenes/office.unity
+  - enabled: 1
     path: Assets/2dactionrpg/Scenes/aboutMainChar.unity
   - enabled: 1
     path: Assets/2dactionrpg/Scenes/menu.unity
