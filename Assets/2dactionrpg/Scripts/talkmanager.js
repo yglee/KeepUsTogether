@@ -39,10 +39,12 @@ private var canReceive1 = true;
 private var canReceive2 = true;
 private var canReceive3 = true;
 private var canReceive4 = true;
+private var breakout = false;
 
 //this function will automatically break down a long string into multiple lines
 function updateLines(string : String)
 {
+	breakout = false;
 	var lines = new Array();
 	var lineIndex = 0;
 	
@@ -152,6 +154,9 @@ function TypeLineOne () {
     if(line1 != null){
         //we make the string an array, then type each one out one by one
         for (var letter in line1.ToCharArray()) {
+            if (breakout) {
+        		break;
+        	} 
             // if cantalk is true, we add a letter.
             if(canTalk == true){
                 line1GUI.guiText.text += letter;
@@ -181,6 +186,9 @@ function TypeLineOne () {
 function TypeLineTwo () {
     if(line2 != null){
         for (var letter in line2.ToCharArray()) {
+            if (breakout) {
+        		break;
+        	} 
             if(canTalk == true){
                 line2GUI.guiText.text += letter;
                 line2left -= 1;
@@ -202,6 +210,9 @@ function TypeLineTwo () {
 function TypeLineThree () {
     if(line3 != null){
         for (var letter in line3.ToCharArray()) {
+            if (breakout) {
+        		break;
+        	}
             if(canTalk == true){
                 line3GUI.guiText.text += letter;
                 line3left -= 1;
@@ -214,7 +225,7 @@ function TypeLineThree () {
                     audio.PlayOneShot(talkSound);
                 }
                 yield WaitForSeconds (letterPause);
-            }
+            } 
         }		
     }
 }
@@ -223,6 +234,9 @@ function TypeLineThree () {
 function TypeLineFour () {
     if(line4 != null){
         for (var letter in line4.ToCharArray()) {
+            if (breakout) {
+        		break;
+        	} 
             if(canTalk == true){
                 line4GUI.guiText.text += letter;
                 line4left -= 1;
@@ -242,7 +256,8 @@ function TypeLineFour () {
 }
 
 //when we are called to clear the strings, we do so. That way the guiText strings won't accidentally add to something that already exists. Instead its refreshed so it can be used over and over.
-function clearStrings () {
+function clearStrings() {
+	breakout = true;
     line1GUI.guiText.text = null;
     line2GUI.guiText.text = null;
     line3GUI.guiText.text = null;

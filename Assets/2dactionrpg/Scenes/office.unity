@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d86a48ced84476b9f5ff73c21c107b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
+  canMove: 0
   idleLeft: {fileID: 2800000, guid: decd495a5fab34c18b11ff56eca58d23, type: 3}
   idleRight: {fileID: 2800000, guid: ed3b536f19a1a45bfb9692393a121654, type: 3}
   idleUp: {fileID: 2800000, guid: 50540db83f4bc40559339728e9257e6e, type: 3}
@@ -16098,6 +16098,10 @@ Prefab:
     - target: {fileID: 11400000, guid: ce052c492b534462697bb541021e80ad, type: 2}
       propertyPath: line4
       value: enough gems!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: ce052c492b534462697bb541021e80ad, type: 2}
+      propertyPath: canMove
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce052c492b534462697bb541021e80ad, type: 2}

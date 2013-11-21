@@ -36,37 +36,37 @@ if(attacking == false){
 //now we check the velocity of the player and animate it based on that velocity by choosing a direction.
 if(rigidbody.velocity.x > 0.25 && rigidbody.velocity.z == 0){
 direction = 1;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(rigidbody.velocity.x < -0.25 && rigidbody.velocity.z == 0){
 direction = 2;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(rigidbody.velocity.z > 0.25 && rigidbody.velocity.x == 0){
 direction = 3;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(rigidbody.velocity.z < -0.25 && rigidbody.velocity.x == 0){
 direction = 4;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 
 //we check to see if our direction doesn't match what way the player is actually going so we can fix it. this helps keep the animation polished in case of any weird incidents
 if(direction == 1 && rigidbody.velocity.x < -0.25){
 direction = 2;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(direction == 2 && rigidbody.velocity.x > 0.25){
 direction = 1;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(direction == 3 && rigidbody.velocity.z < -0.25){
 direction = 4;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 if(direction == 4 && rigidbody.velocity.z > 0.25){
 direction = 3;
-weaponScript.getDir(direction);
+//weaponScript.getDir(direction);
 }
 
 //if the direction = 1 and is in fact going the right direction for that, we allow it to animate right

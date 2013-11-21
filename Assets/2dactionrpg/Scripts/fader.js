@@ -7,12 +7,16 @@ private var fastFadeOut = false;
 private var gameOver = false;
 //game over text that this finds and only shows when a message is received by the player that it died.
 private var gameOverText:GameObject;
-private var aboutMainCharText:GameObject;
+private var aboutMainCharParent1:GameObject;
+private var aboutMainCharParent2:GameObject;
+private var aboutMainCharParent3:GameObject;
 
 function Start () {
 	//on start we set find the gameovertext so its ready to be used if the player dies
 	gameOverText = GameObject.Find("permanentobjects/GUI/youdiedtext");
-	aboutMainCharText = GameObject.Find("permanentobjects/GUI/AboutMainChar");
+	aboutMainCharParent1 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent1");
+	aboutMainCharParent2 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent2");
+	aboutMainCharParent3 = GameObject.Find("permanentobjects/GUI/AboutMainCharParent3");	
 	//we make sure the guitexture is enabled before we fade in. this fader is attached to every scene so we have smooth looking transitions during scene changes.
 	guiTexture.enabled = true;
 }
@@ -20,10 +24,14 @@ function Start () {
 function displayAboutJohnText () {
 	fastFadeOut = true;
 	guiTexture.enabled = true;
-	aboutMainCharText.guiText.enabled = true;
+	aboutMainCharParent1.guiText.enabled = true;
+	aboutMainCharParent2.guiText.enabled = true;
+	aboutMainCharParent3.guiText.enabled = true;
 	//we wait for 2 seconds so the text can display for long enough before we disable the text again, and start the game over
 	yield WaitForSeconds(10);
-	aboutMainCharText.guiText.enabled = false;
+	aboutMainCharParent1.guiText.enabled = false;
+	aboutMainCharParent2.guiText.enabled = false;
+	aboutMainCharParent3.guiText.enabled = false;
 }
 
 function Update () {

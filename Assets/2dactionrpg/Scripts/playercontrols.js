@@ -14,8 +14,8 @@ private var isTalking = false;
 
 function Start () {
     //we find the inventory box and deactivate it. the controls access inventory so the player can open it up and close it.
-    inv = GameObject.Find("GUI/inventory");
-    inv.SetActive(false);
+//    inv = GameObject.Find("GUI/inventory");
+//    inv.SetActive(false);
 }
 
 function Update () {
@@ -97,21 +97,21 @@ function strike () {
 
 //we check the inventory to see if we're opening it or turning it off.
 function inventoryCheck () {
-    if(inv.activeInHierarchy == false){
-        inv.SetActive(true);
-        invEnabled = true;
-        rigidbody.velocity = Vector3(0,0,0);
-    }else{
-        inv.SetActive(false);
-        invEnabled = false;
-    }
+//    if(inv.activeInHierarchy == false){
+//        inv.SetActive(true);
+//        invEnabled = true;
+//        rigidbody.velocity = Vector3(0,0,0);
+//    }else{
+//        inv.SetActive(false);
+//        invEnabled = false;
+//    }
 }
 
 //if we're in a trigger collider that is tagged as npc, we don't allow the player to open the inventory because they use the same button.
 function OnTriggerEnter (other : Collider){
-    if(other.tag == "npc" && inv.activeInHierarchy == false){
-        canInventory = false;
-    }
+//    if(other.tag == "npc" && inv.activeInHierarchy == false){
+//        canInventory = false;
+//    }
 }
 //if the player exits a trigger area, we turn the ability to open inventory back on
 function OnTriggerExit (other : Collider){

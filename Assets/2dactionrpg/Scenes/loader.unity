@@ -646,9 +646,6 @@ GameObject:
   - 23: {fileID: 224937803}
   - 114: {fileID: 224937802}
   - 114: {fileID: 224937801}
-  - 114: {fileID: 224937800}
-  - 114: {fileID: 224937799}
-  - 114: {fileID: 224937805}
   - 54: {fileID: 224937798}
   - 136: {fileID: 224937797}
   - 82: {fileID: 224937796}
@@ -762,46 +759,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &224937799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400014, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224937794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51af21d2e3809be46879e586ca5bed21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heart1: {fileID: 1404948513}
-  heart2: {fileID: 480359769}
-  heart3: {fileID: 1343429124}
-  whole: {fileID: 2800000, guid: 2c9ab08b5906b2941b170b4e4356e800, type: 3}
-  half: {fileID: 2800000, guid: 056024707ebee5847a93eb23d0894ce6, type: 3}
-  empty: {fileID: 2800000, guid: 5e50d6cca65b0b3478721067cf5df158, type: 3}
-  hurtSound: {fileID: 8300000, guid: 66e4007cbd56848b28c0e5bfd895c2c6, type: 3}
-  heartSound: {fileID: 8300000, guid: 403e6c07be9934634a2584b5b51d2e7e, type: 3}
---- !u!114 &224937800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400016, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224937794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b198de58937a14744998d77db872cfc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animScript: {fileID: 224937801}
-  controlScript: {fileID: 224937802}
-  sword: {fileID: 2036039275}
-  bow: {fileID: 636412649}
-  wand: {fileID: 1329590769}
-  swordSound: {fileID: 8300000, guid: 1ade732c98cca45398a52861ee16f119, type: 3}
-  bowSound: {fileID: 8300000, guid: 9c53801a0dd97472ebccfc7fea3a4465, type: 3}
-  magicSound: {fileID: 8300000, guid: a4e0593e7e5954a4eb20d5fe098e5a91, type: 3}
 --- !u!114 &224937801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd23a3824f4e43b08120c8738c80c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponScript: {fileID: 224937800}
+  weaponScript: {fileID: 0}
   idleLeft: {fileID: 2800000, guid: 13061948e543b42beb2904a04483f78a, type: 3}
   idleRight: {fileID: 2800000, guid: d091d65eb41c040d18eb1150008f57b3, type: 3}
   idleUp: {fileID: 2800000, guid: cb77a941d4be34c8b9704b213080c536, type: 3}
@@ -876,20 +833,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 224937794}
   m_Mesh: {fileID: 4300000, guid: b4d9f72b0752149e196dd6736992b83f, type: 3}
---- !u!114 &224937805
-MonoBehaviour:
+--- !u!1 &227583800
+GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400022, guid: 30009577fc66646a8b602e412cf37f9f,
+  m_PrefabParentObject: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_PrefabInternal: {fileID: 384606397}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 227583801}
+  - 132: {fileID: 227583802}
+  m_Layer: 0
+  m_Name: AboutMainCharParent3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227583801
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_PrefabInternal: {fileID: 384606397}
+  m_GameObject: {fileID: 227583800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .400000006, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 913592451}
+--- !u!132 &227583802
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224937794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7000211adf5bd486cab9efd94a6204c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchaseSound: {fileID: 8300000, guid: 403e6c07be9934634a2584b5b51d2e7e, type: 3}
-  gemSound: {fileID: 8300000, guid: 05e36e681eaf2403784a6ce983b73621, type: 3}
+  m_PrefabInternal: {fileID: 384606397}
+  m_GameObject: {fileID: 227583800}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: "daughter\u2019s big dance recital tonight. You are planning to attend the
+    recital after work."
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 40
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &251886494
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,12 +895,12 @@ GameObject:
   - 4: {fileID: 251886495}
   - 132: {fileID: 251886496}
   m_Layer: 0
-  m_Name: moneytext
+  m_Name: moneygui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &251886495
 Transform:
   m_ObjectHideFlags: 0
@@ -941,6 +936,72 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 0
   m_RichText: 1
+--- !u!1001 &384606397
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 913592451}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Text
+      value: "daughter\u2019s big dance recital tonight. You are planning to attend
+        the recital after work."
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620,
+        type: 3}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Name
+      value: AboutMainCharParent3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_RootGameObject: {fileID: 227583800}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &404928368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,66 +1124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: bow
---- !u!1 &480359766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100022, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 480359767}
-  - 131: {fileID: 480359769}
-  - 114: {fileID: 480359768}
-  m_Layer: 0
-  m_Name: heart2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &480359767
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400022, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480359766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .949999988, z: 1}
-  m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
-  m_Children: []
-  m_Father: {fileID: 913592451}
---- !u!114 &480359768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400028, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480359766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5daf56655c9184f971ca79afd4fd34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!131 &480359769
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13100016, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480359766}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 2c9ab08b5906b2941b170b4e4356e800, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .5}
-  m_PixelInset:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
 --- !u!1 &636412649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,11 +1555,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1082774467}
+  - {fileID: 1467013301}
+  - {fileID: 227583801}
   - {fileID: 917519056}
   - {fileID: 846119180}
-  - {fileID: 1404948511}
-  - {fileID: 480359767}
-  - {fileID: 1343429122}
   - {fileID: 71439855}
   - {fileID: 834523921}
   - {fileID: 2065495404}
@@ -1736,7 +1736,7 @@ GameObject:
   - 4: {fileID: 1082774467}
   - 132: {fileID: 1082774468}
   m_Layer: 0
-  m_Name: AboutMainChar
+  m_Name: AboutMainCharParent1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1749,7 +1749,7 @@ Transform:
   m_PrefabInternal: {fileID: 2088212087}
   m_GameObject: {fileID: 1082774466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 11}
+  m_LocalPosition: {x: .5, y: .569999993, z: 11}
   m_LocalScale: {x: .125, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 913592451}
@@ -1762,15 +1762,16 @@ GUIText:
   m_GameObject: {fileID: 1082774466}
   m_Enabled: 0
   serializedVersion: 3
-  m_Text: About John ...
+  m_Text: "You are a single father. You have an 8 year old daughter. You work 2 jobs
+    \n"
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 80
+  m_FontSize: 40
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1972,66 +1973,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224937795}
---- !u!1 &1343429121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100050, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1343429122}
-  - 131: {fileID: 1343429124}
-  - 114: {fileID: 1343429123}
-  m_Layer: 0
-  m_Name: heart3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1343429122
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400050, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343429121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .550000012, y: .949999988, z: 1}
-  m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
-  m_Children: []
-  m_Father: {fileID: 913592451}
---- !u!114 &1343429123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400048, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343429121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5daf56655c9184f971ca79afd4fd34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!131 &1343429124
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13100034, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343429121}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 2c9ab08b5906b2941b170b4e4356e800, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .5}
-  m_PixelInset:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
 --- !u!1 &1353860837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,66 +2066,57 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 0
   m_RichText: 0
---- !u!1 &1404948510
+--- !u!1 &1467013300
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100056, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_PrefabInternal: {fileID: 1639699333}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1404948511}
-  - 131: {fileID: 1404948513}
-  - 114: {fileID: 1404948512}
+  - 4: {fileID: 1467013301}
+  - 132: {fileID: 1467013302}
   m_Layer: 0
-  m_Name: heart1
+  m_Name: AboutMainCharParent2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1404948511
+  m_IsActive: 1
+--- !u!4 &1467013301
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400056, guid: 30009577fc66646a8b602e412cf37f9f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404948510}
+  m_PrefabParentObject: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_PrefabInternal: {fileID: 1639699333}
+  m_GameObject: {fileID: 1467013300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .449999988, y: .949999988, z: 1}
-  m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 11}
+  m_LocalScale: {x: .125, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 913592451}
---- !u!114 &1404948512
-MonoBehaviour:
+--- !u!132 &1467013302
+GUIText:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400052, guid: 30009577fc66646a8b602e412cf37f9f,
+  m_PrefabParentObject: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404948510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5daf56655c9184f971ca79afd4fd34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!131 &1404948513
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13100036, guid: 30009577fc66646a8b602e412cf37f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404948510}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 2c9ab08b5906b2941b170b4e4356e800, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .5}
-  m_PixelInset:
+  m_PrefabInternal: {fileID: 1639699333}
+  m_GameObject: {fileID: 1467013300}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: 'to provide food & shelter for your family. You are looking forward to your '
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 40
+  m_FontStyle: 0
+  m_Color:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1 &1577969355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2178,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 
+--- !u!1001 &1639699333
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 913592451}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Text
+      value: 'to provide food & shelter for your family. You are looking forward to
+        your '
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620,
+        type: 3}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Name
+      value: AboutMainCharParent2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+  m_RootGameObject: {fileID: 1467013300}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1656220679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2857,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .5
+      value: .569999993
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2880,6 +2878,32 @@ Prefab:
     - target: {fileID: 400000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Text
+      value: "You are a single father. You have an 8 year old daughter. You work 2
+        jobs \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620,
+        type: 3}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Name
+      value: AboutMainCharParent1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bcd822d155a74f72b687a1dc8a140c6, type: 2}
