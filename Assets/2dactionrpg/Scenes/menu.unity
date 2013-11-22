@@ -1096,7 +1096,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 50
+  m_FontSize: 75
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1110,7 +1110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89842794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .610000014, z: 0}
+  m_LocalPosition: {x: .5, y: .540000021, z: 0}
   m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
   m_Children: []
   m_Father: {fileID: 1752355555}
@@ -6812,7 +6812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!132 &639121075
 GUIText:
   m_ObjectHideFlags: 0
@@ -10301,19 +10301,19 @@ GUIText:
   m_GameObject: {fileID: 988362226}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: NEW GAME
+  m_Text: Start
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 29223d04dcce6438db8d857e4e808333, type: 3}
+  m_Font: {fileID: 12800000, guid: f0abd8df02a55434aa7e6c773366bb5d, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 100
+  m_FontSize: 150
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4288737535
   m_PixelCorrect: 0
   m_RichText: 1
 --- !u!4 &988362228
@@ -10323,7 +10323,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988362226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .270000011, z: 0}
+  m_LocalPosition: {x: .5, y: .319999993, z: 0}
   m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
   m_Children: []
   m_Father: {fileID: 1752355555}
@@ -15200,7 +15200,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381509174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .699999988, z: 0}
+  m_LocalPosition: {x: .5, y: .660000026, z: 0}
   m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
   m_Children: []
   m_Father: {fileID: 1752355555}
@@ -15220,7 +15220,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a9e06262f9d9f40699f22eec6989a620, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 50
+  m_FontSize: 75
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
